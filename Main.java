@@ -7,6 +7,13 @@ public class Main {
         tree.insert('C');
         tree.insert('D');
         tree.insert('E');
+        tree.insert('F');
+        tree.insert('G');
+        tree.insert('H');
+        tree.insert('I');
+        tree.insert('J');
+        tree.insert('K');
+        tree.insert('L');
 
         System.out.println("Inorder traversal:");
         tree.inorder(); // Output: D B E A C
@@ -22,6 +29,8 @@ public class Main {
 
         System.out.println("Total number of nodes: " + tree.countNodes()); // Output: 5
 
-        System.out.println("Apakah huruf 'B' ada di dalam tree? " + tree.search('B')); // Output: true
+        System.out.println("Apakah huruf 'A' ada di dalam tree? " + tree.search('A')); // Output: true
+
+        System.out.println("Kedalaman tree: " + tree.depth()); // Output: 3
     }
 }

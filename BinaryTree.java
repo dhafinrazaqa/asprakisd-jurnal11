@@ -117,4 +117,18 @@ public class BinaryTree<E> {
         }
         return search(node.getLeft(), data) || search(node.getRight(), data);
     }
+
+    public int depth() {
+        return depth(root);
+    }
+
+    private int depth(Node<E> node) {
+        if (node == null) {
+            return 0;
+        }
+
+        int leftDepth = depth(node.getLeft());
+        int rightDepth = depth(node.getRight());
+        return 1 + Math.max(leftDepth, rightDepth);
+    }
 }
